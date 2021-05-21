@@ -88,7 +88,7 @@ export const DataTable = () => {
               </td>
               <td className="align-middle">{place.estado}</td>
               <td className="align-middle">
-                <img src={place.urls[0]} alt="imagen" />
+                {place.urls != 0 && <img src={place.urls[0]} alt="imagen" />}
               </td>
               <td className="align-middle">
                 <Link

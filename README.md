@@ -2,9 +2,29 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# How to run
 
-In the project directory, you can run:
+## Necessary software
+
+You need to install:
+
+- nodejs 14.17.0 LTS
+- npm last version
+- yarn last version ($npm install -g yarn)
+
+## Clone the project
+
+### `$git clone https://github.com/aland3v/inventory-react.git`
+
+## Enter the project directory
+
+### `$cd inventory-react`
+
+## Install the dependencies
+
+### `yarn install`
+
+## Run the project
 
 ### `yarn start`
 
@@ -13,6 +33,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+## Other Scripts
 
 ### `yarn test`
 

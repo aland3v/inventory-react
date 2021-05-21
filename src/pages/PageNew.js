@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FormNewProduct } from '../components/FormNewProduct';
 import { UploadMessage } from '../components/UploadMessage';
 import { PageLoading } from './PageLoading';
-import { subirVariosFilesAndDocument } from '../server';
+import { subirVariosFilesAndDocument, existeElProducto } from '../server';
 
 export const PageNew = props => {
   const [uploadStatus, setUploadStatus] = useState({
@@ -19,6 +19,24 @@ export const PageNew = props => {
       error: null,
       ok: null,
     });
+    try {
+      const existe = await existeElProducto('productos', docData.name);
+      if (existe) {
+        alert('El producto ya existe!!!');
+        setUploadStatus({
+          loading: false,
+          error: {
+            title: '',
+            body: 'Debes ingresar un nombre de producto que no exista',
+            type: 'alert-danger',
+          },
+          ok: null,
+        });
+        return;
+      }
+    } catch (error) {
+      console.log(error);
+    }
     try {
       await subirVariosFilesAndDocument(
         docData,

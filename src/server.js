@@ -134,6 +134,15 @@ const logout = async () => {
   }
 };
 
+const existeElProducto = async (collName, name) => {
+  const { docs } = await projectFirestore
+    .collection(collName)
+    .where('name', '==', name)
+    .get();
+
+  return docs.length != 0 ? true : false;
+};
+
 const subirVariosFilesAndDocument = async (
   docData,
   storgFiles,
@@ -238,4 +247,5 @@ export {
   logout,
   subirVariosFilesAndDocument,
   updateDocumentAndFiles,
+  existeElProducto,
 };

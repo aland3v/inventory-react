@@ -50,6 +50,7 @@ export const FormUpdatePlace = ({ handleSubmit, id }) => {
           className="form-control"
           value={name}
           onChange={e => setName(e.target.value)}
+          required
         />
       </div>
 
@@ -60,7 +61,8 @@ export const FormUpdatePlace = ({ handleSubmit, id }) => {
           className="form-control"
           placeholder="Descripción"
           value={description}
-          onChange={e => setDescription(e.target.value)}></textarea>
+          onChange={e => setDescription(e.target.value)}
+          required></textarea>
       </div>
       <div className="form-group">
         <input
@@ -69,6 +71,7 @@ export const FormUpdatePlace = ({ handleSubmit, id }) => {
           className="form-control"
           value={cantidad}
           onChange={e => setCantidad(e.target.value)}
+          required
         />
       </div>
       <div className="form-group">
@@ -78,6 +81,7 @@ export const FormUpdatePlace = ({ handleSubmit, id }) => {
           className="form-control"
           value={precioUnitario}
           onChange={e => setPrecioUnitario(e.target.value)}
+          required
         />
       </div>
       <div className="form-group">
@@ -87,6 +91,7 @@ export const FormUpdatePlace = ({ handleSubmit, id }) => {
           className="form-control"
           value={estado}
           onChange={e => setEstado(e.target.value)}
+          required
         />
       </div>
       <div className="form-group">
