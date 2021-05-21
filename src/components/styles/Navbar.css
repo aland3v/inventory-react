@@ -1,0 +1,12 @@
+.link-like {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.link-like:hover {
+  color: #2b3e50 !important;
+}
+
+.link-like:focus {
+  box-shadow: none !important;
+}
